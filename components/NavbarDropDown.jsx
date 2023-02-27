@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const NavbarDropDown = (props) => {
-  const { mainTitle, navItems } = props;
   return (
     <li className="nav-item dropdown">
       <a
@@ -12,15 +11,18 @@ const NavbarDropDown = (props) => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        {mainTitle}
+        [LIST ITEM TITLE HERE]
       </a>
       <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
         <li>
-          {navItems.map((item, idx) => (
-            <Link href={item.link} key={idx} className="dropdown-item">
-              {item.name}
-            </Link>
-          ))}
+          <a href="" className="dropdown-item">
+            NAV ITEM 1 HERE
+          </a>
+        </li>
+        <li>
+          <a href="" className="dropdown-item">
+            NAV ITEM 2 HERE
+          </a>
         </li>
       </ul>
     </li>
